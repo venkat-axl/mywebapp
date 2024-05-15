@@ -9,6 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             height: 100vh;
         }
         header {
@@ -16,17 +17,23 @@
             color: white;
             text-align: center;
             padding: 1rem;
-            flex: 0 1 auto;
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .container {
+            display: flex;
+            flex: 1;
         }
         nav {
             background-color: #333;
             width: 200px;
             padding: 0;
-            flex: 0 1 auto;
+            flex-shrink: 0;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             border-bottom: 1px solid #444;
@@ -50,18 +57,20 @@
     <header>
         <h1>Simple Web App</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>Welcome to the Web App</h2>
-        <p>This is a simple web application layout with a header, a sidebar for navigation, and a main content area.</p>
-    </main>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Welcome to the Web App</h2>
+            <p>This is a simple web application layout with a header, a sidebar for navigation, and a main content area.</p>
+        </main>
+    </div>
 </body>
 </html>
